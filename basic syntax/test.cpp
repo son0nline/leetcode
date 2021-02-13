@@ -6,6 +6,13 @@ using namespace std;
 
 int main(){
 	
+	cout<<4%2;
+	
+	
+	cout<<7/2;
+	
+	cout<<"\n";
+	
 	printf ("2 ^ 31 = %f\n", pow (2, 31) );
 	//2147483648
 	//1534236469
@@ -16,6 +23,8 @@ int main(){
         int max = pow(2,31)-1;
         cout<<max<<"\n";
         cout<<min<<"\n";
+        //-2147483648
+        //-2147483648
         
 	int i = 1235;
 	
