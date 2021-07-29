@@ -2,7 +2,10 @@
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
-using namespace std;
+
+
+//using namespace std;
+using std::cout;
 
 int main(){
 	
