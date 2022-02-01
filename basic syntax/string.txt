@@ -1,0 +1,36 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int k = 3;
+    string num="1432219";
+    
+    int strlength = num.length();
+    
+    if (k == strlength) return 0;
+    
+    for(int i = 0 ; i<strlength;i++){
+        cout<<num[i];
+    }
+    num.erase(2,1);
+    cout<<"\n"<<num;
+    num.erase(num.begin() + 1);
+    cout<<"\n"<<num;
+    
+    if (num.empty()) cout<<"\n empty";
+    
+    size_t t = num.find_first_not_of("12"); // trả về index đầu tiên không phải là ký tự truyền vào
+    cout<<"\n"<< t;
+    return 0;
+}
