@@ -7,7 +7,7 @@ static const auto fast = []() {
 
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
+    int removeDuplicatesUseMap(vector<int>& nums) {
         map<int,int> mymap;
         vector<int>::iterator it = nums.begin();
         while (it != nums.end())
@@ -21,5 +21,18 @@ public:
             counter++;
         }
         return mymap.size();
+    }
+	
+	int removeDuplicates(std::vector<int>& nums) {
+        if (nums.size() < 2) return nums.size();
+
+        auto k = 0;
+        for (ssize_t i = 0; i < nums.size(); ++i) {
+            if (nums[k] == nums[i]) continue;
+
+            nums[++k] = nums[i];
+        }
+
+        return k + 1;
     }
 };
